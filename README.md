@@ -4,6 +4,7 @@ This is an experiment and a work in progress to develop a zircon petrochronology
 Below is a density plot of the U-Pb ages of zircons in the compilation
 ![alt text][age_plot]
 
-[age_plot]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[age_plot]: https://github.com/cverdel/zircon_petrochronology/blob/main/Rplot.png?raw=true
+
 
 
