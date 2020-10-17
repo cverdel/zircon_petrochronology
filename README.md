@@ -16,9 +16,19 @@ p1
 
 
 Below is a density plot of the ages of zircons in the compilation.
+```
+p2<-ggplot(df, aes(x=Selected_age)) + 
+  geom_density(alpha=.9, fill="lightblue")+
+  xlab("Age (Ma)")+
+  theme_bw()+
+  theme(axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())
+p2
+````
 ![alt text][age_plot]
 
-[age_plot]: https://github.com/cverdel/zircon_petrochronology/blob/main/Rplot.png?raw=true
+[age_plot]: https://github.com/cverdel/zircon_petrochronology/blob/main/Rplot_age_density.png?raw=true
 
 
 
