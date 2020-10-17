@@ -30,5 +30,28 @@ p2
 
 [age_plot]: https://github.com/cverdel/zircon_petrochronology/blob/main/Rplot_age_density.jpeg?raw=true
 
+Th and U concentrations are reported in nearly every zircon geochronology study, and Th/U is frequently used (for better or worse) to distinguish "igneous" from "metamorphic" zircons. It could be interesting therefore to plot Th/U vs. age for zircons in the dataset. In the example below this is done with boxplots in an effort to illustrate the most common zircon Th/U in different age bins (here chosen as 50 My). 
+```
+df$ThU<-df$Th/df$U #Calculates Th/U
+
+#Sets some parameters
+lwd=.005 #linewidth of boxplots
+interval=50 #bin interval
+oa=0.05 #transparency of outlying points
+
+#Creates plot
+p3<-ggplot(df, aes(x=Selected_age, y=ThU))+
+  geom_boxplot(outlier.alpha=oa, lwd=lwd, fill='lightblue', aes(group=cut_width(Selected_age, interval, boundary = 0)))+
+  scale_y_log10()+
+  geom_vline(xintercept=c(541, 1000, 1600, 2500, 4000))+
+  xlab("Age (Ma)")+
+  ylab("Th/U")+
+  theme_bw()
+p3
+````
+![alt text][age_plot]
+
+[age_plot]: https://github.com/cverdel/zircon_petrochronology/blob/main/Rplot_age_density.jpeg?raw=true
+
 
 
