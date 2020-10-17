@@ -3,7 +3,7 @@ This is an experiment and a work in progress to develop a zircon petrochronology
 
 This figure shows where the zircons are from.
 ```
-#df is the compiled dataset
+#df is the compiled dataset, something like df<-read.csv("zircon_data_table_v0.csv")
 p1 <- ggplot(df, aes(Region, ..count..)) +
   geom_bar(colour="black", fill="lightblue")+
   ylab("Number of zircons")+
