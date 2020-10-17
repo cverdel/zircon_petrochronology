@@ -49,9 +49,9 @@ p3<-ggplot(df, aes(x=Selected_age, y=ThU))+
   theme_bw()
 p3
 ````
-![alt text][age_plot]
+![alt text][ThU_plot]
 
-[age_plot]: https://github.com/cverdel/zircon_petrochronology/blob/main/Rplot_age_density.jpeg?raw=true
+[ThU_plot]: https://github.com/cverdel/zircon_petrochronology/blob/main/Rplot_ThU_boxplot.jpeg?raw=true
 
 
 
