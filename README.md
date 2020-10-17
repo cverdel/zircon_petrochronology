@@ -28,7 +28,7 @@ p2
 ````
 ![alt text][age_plot]
 
-[age_plot]: https://github.com/cverdel/zircon_petrochronology/blob/main/Rplot_age_density.png?raw=true
+[age_plot]: https://github.com/cverdel/zircon_petrochronology/blob/main/Rplot_age_density.jpeg?raw=true
 
 
 
