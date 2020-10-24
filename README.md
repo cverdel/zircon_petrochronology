@@ -72,7 +72,7 @@ p4
 
 [ThU_faceted_plot]: https://github.com/cverdel/zircon_petrochronology/blob/main/figures/faceted_ThU.jpeg?raw=true
 
-Ti concentration is frequently used for zircon thermomemtry. The followinng plot show Ti concentration vs Th/U for the entire dataset. The point in the middle shows the median Ti concentration and Th/U of zircon.
+Ti concentration is frequently used for zircon thermomemtry. The following plot show Ti concentration vs Th/U for the entire dataset. The point in the middle of the graph shows the median Ti concentration and Th/U of zircon.
 ```
 #Determines median Th/U and Ti concentration
 medThU<-as.numeric(format(round(median(df$ThU, na.rm = TRUE),1)))
@@ -92,6 +92,9 @@ p5<-ggplot(df, aes(x=Ti, y=ThU))+
   ylab("Th/U")+
   theme_bw()
 p5
+````
+![alt text][ThU_Ti_plot]
 
+[ThU_Ti_plot]: https://github.com/cverdel/zircon_petrochronology/blob/main/figures/ThU_Ti_plot.jpeg?raw=true
 
 
