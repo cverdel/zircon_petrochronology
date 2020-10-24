@@ -72,7 +72,26 @@ p4
 
 [ThU_faceted_plot]: https://github.com/cverdel/zircon_petrochronology/blob/main/figures/faceted_ThU.jpeg?raw=true
 
+Ti concentration is frequently used for zircon thermomemtry. The followinng plot show Ti concentration vs Th/U for the entire dataset. The point in the middle shows the median Ti concentration and Th/U of zircon.
+```
+#Determines median Th/U and Ti concentration
+medThU<-as.numeric(format(round(median(df$ThU, na.rm = TRUE),1)))
+medTi<-as.numeric(format(round(median(df$Ti, na.rm=TRUE),2)))
+coords = paste(medTi,medThU,sep=",")
 
+#Creates plot
+p5<-ggplot(df, aes(x=Ti, y=ThU))+
+  scale_fill_gradientn (colours=(blue2red(100))) +
+  stat_density2d(aes(fill=..level..,alpha=..level..),bins=40, geom='polygon', h = c(1,.1), show.legend = F) + 
+  geom_point(size=.5, alpha=0.1)+
+  geom_point(aes(x=medTi, y=medThU), size=3, colour="white")+
+  annotate("text",x=medTi, y=medThU+0.15, label=coords, colour="white")+
+  scale_y_log10(limits=c(.02,10))+
+  scale_x_log10(labels=scales::number_format(accuracy = 0.1))+
+  xlab("Ti (ppm)")+
+  ylab("Th/U")+
+  theme_bw()
+p5
 
 
 
