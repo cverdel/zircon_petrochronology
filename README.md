@@ -69,6 +69,9 @@ p4<-ggplot(df, aes(x=Selected_age, y=ThU))+
   facet_wrap(~Region, ncol=2)
 p4
 ````
+![alt text][ThU_faceted_plot]
+
+[ThU_faceted_plot]: https://github.com/cverdel/zircon_petrochronology/blob/main/figures/faceted_ThU.jpeg?raw=true
 
 
 
