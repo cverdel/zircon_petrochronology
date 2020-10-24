@@ -53,7 +53,7 @@ p3
 
 [ThU_plot]: https://github.com/cverdel/zircon_petrochronology/blob/main/figures/Rplot_ThU_boxplot.jpeg?raw=true
 
-It could be useful to view these data divided by the general regions in which they were collected. Below the data are shown as 2D density plots instead of boxplots,
+It could be useful to view these data divided by the general regions in which they were collected. Below the data are shown as 2D density plots instead of boxplots.
 ```
 p4<-ggplot(df, aes(x=Selected_age, y=ThU))+
   geom_vline(xintercept=c(541, 1000, 1600, 2500, 4000))+
