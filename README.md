@@ -55,7 +55,6 @@ p3
 
 It could be useful to view these data divided by the general regions in which they were collected. Below the data are shown as 2D density plots instead of boxplots,
 ```
-#Density plot of Th/U
 p4<-ggplot(df, aes(x=Selected_age, y=ThU))+
   geom_vline(xintercept=c(541, 1000, 1600, 2500, 4000))+
   scale_fill_gradientn (colours=(blue2red(100))) +
