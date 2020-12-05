@@ -5,7 +5,11 @@ For starters, I have added an initial version of a zircon geochronology and trac
 
 This figure shows where the zircons are from.
 ```
+library(tidyverse)
+
 df<-read.csv("https://raw.githubusercontent.com/cverdel/zircon_petrochronology/main/zircon_data_table_v0.csv") #Reads in the compiled dataset
+df$Region <- fct_infreq(df$Region) #Sorts Region by frequency
+df<-df %>%drop_na(Region) #Removes rows where Region is NA
 
 p1 <- ggplot(df, aes(Region, ..count..)) +
   geom_bar(colour="black", fill="lightblue")+
