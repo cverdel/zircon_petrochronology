@@ -5,7 +5,8 @@ For starters, I have added an initial version of a zircon geochronology and trac
 
 This figure shows where the zircons are from.
 ```
-#df is the compiled dataset, something like df<-read_csv("zircon_data_table_v0.csv")
+df<-read.csv("https://raw.githubusercontent.com/cverdel/zircon_petrochronology/main/zircon_data_table_v0.csv") #Reads in the compiled dataset
+
 p1 <- ggplot(df, aes(Region, ..count..)) +
   geom_bar(colour="black", fill="lightblue")+
   ylab("Number of zircons")+
